@@ -1,10 +1,6 @@
 const errorStack = (new Error()).stack;
-export errorTypes = {
-	Error: Symbol(),
-	SyntaxError: Symbol()
-};
 
-export default (props) => {
+export default props => {
 	// use Object.create(), because some VMs prevent setting line/column otherwise
 	// (iOS Safari 10 even throws an exception)
 	const error = Object.create(SyntaxError.prototype);

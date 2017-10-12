@@ -3,10 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <script src="index.js"></script>
+  <script src="es5.js"></script>
 </head>
 
 <body>
+
+	<script>
+		fetch('__example__.js')
+			.then(data => data.text())
+			.then(text => {
+				console.log(
+					prettyCodeErrors(text, 26, 11)
+				);
+			});
+	</script>
 
 </body>
 </html>
