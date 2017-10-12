@@ -1,1 +1,2 @@
-# pretty-code-errors
+# Pretty code errors
+
