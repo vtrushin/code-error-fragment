@@ -1,0 +1,1 @@
+# pretty-code-errors
