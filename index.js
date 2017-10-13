@@ -31,9 +31,7 @@ export default (input, linePos, columnPos, settings) => {
 	const cursorLine = ' '.repeat(targetLineBeforeCursor.length) + '^';
 	const nextLines = printLines(lines, linePos, endLinePos, maxNumLength, settings);
 
-	return [
-		prevLines,
-		cursorLine,
-		nextLines
-	].filter(Boolean).join('\n');
+	return [prevLines, cursorLine, nextLines]
+		.filter(Boolean)
+		.join('\n');
 }
