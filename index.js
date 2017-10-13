@@ -9,15 +9,11 @@ const TAB_SIZE = 4;
 const DELIMITER = ' | ';
 const CURSOR = '^'; // '👆'
 
-function convertTabsToSpaces(string) {
-	return string.replace(/\t/g, ' '.repeat(TAB_SIZE));
-}
-
 function printLine(line, position, maxNumLength) {
 	const num = String(position);
 	const formattedNum = padStart(num, maxNumLength, ' ');
 
-	return formattedNum + DELIMITER + convertTabsToSpaces(line);
+	return formattedNum + DELIMITER + line.replace(/\t/g, ' '.repeat(TAB_SIZE));
 }
 
 function printLines(lines, start, end, maxNumLength) {
@@ -41,8 +37,8 @@ export default (input, linePos, columnPos) => {
 	const maxNumLength = String(endLinePos).length;
 
 	const prevLines = printLines(lines, startLinePos, linePos, maxNumLength);
-	const prevLineBeforeCursor = printLine(lines[linePos - 1].substring(0, columnPos - 1), linePos, maxNumLength);
-	const cursorLine = ' '.repeat(prevLineBeforeCursor.length) + CURSOR;
+	const targetLineBeforeCursor = printLine(lines[linePos - 1].substring(0, columnPos - 1), linePos, maxNumLength);
+	const cursorLine = ' '.repeat(targetLineBeforeCursor.length) + CURSOR;
 	const nextLines = printLines(lines, linePos, endLinePos, maxNumLength);
 
 	// let cutLeft = 0;
