@@ -2,9 +2,9 @@ import babel from 'rollup-plugin-babel';
 
 export default {
 	input: 'index.js',
-	name: 'prettyCodeErrors',
+	name: 'codeErrorFragment',
 	output: {
-		file: 'es5.js',
+		file: 'build.js',
 		format: 'umd'
 	},
 	plugins: [

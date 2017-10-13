@@ -1,0 +1,6 @@
+246 |     var query = [];
+247 | 
+248 |     basis.object.iterate(values, function(key, value){
+                             ^
+249 |         if (modifiedParamsWritten && modifiedParamsWritten[key])
+250 |             return;
