@@ -2,24 +2,20 @@ import createSyntaxError from './create-syntax-error.js';
 import padStart from './pad-start.js';
 
 const OVERFLOW_SYMBOLS = '\u2026'; // …
-const EXTRA_LINES = 2;
 const MAX_LINE_LENGTH = 100;
 const OFFSET_CORRECTION = 60;
-const TAB_SIZE = 4;
-const DELIMITER = ' | ';
-const CURSOR = '^'; // '👆'
 
-function printLine(line, position, maxNumLength) {
+function printLine(line, position, maxNumLength, settings) {
 	const num = String(position);
 	const formattedNum = padStart(num, maxNumLength, ' ');
 
-	return formattedNum + DELIMITER + line.replace(/\t/g, ' '.repeat(TAB_SIZE));
+	return formattedNum + ' | ' + line.replace(/\t/g, ' '.repeat(settings.tabSize));
 }
 
-function printLines(lines, start, end, maxNumLength) {
+function printLines(lines, start, end, maxNumLength, settings) {
 	return lines
 		.slice(start, end)
-		.map((line, i) => printLine(line, start + i + 1, maxNumLength))
+		.map((line, i) => printLine(line, start + i + 1, maxNumLength, settings))
 		.join('\n');
 
 	// return lines.slice(start, end).map((line, i) => {
@@ -30,16 +26,24 @@ function printLines(lines, start, end, maxNumLength) {
 	// }).join('\n');
 }
 
-export default (input, linePos, columnPos) => {
+const defaultSettings = {
+	extraLines: 2,
+	tabSize: 4,
+	cursor: '^', // '👆'
+};
+
+export default (input, linePos, columnPos, settings) => {
+	settings = { ...defaultSettings, ...settings };
+
 	const lines = input.split(/\r\n?|\n|\f/);
-	const startLinePos = Math.max(1, linePos - EXTRA_LINES) - 1;
-	const endLinePos = Math.min(linePos + EXTRA_LINES, lines.length);
+	const startLinePos = Math.max(1, linePos - settings.extraLines) - 1;
+	const endLinePos = Math.min(linePos + settings.extraLines, lines.length);
 	const maxNumLength = String(endLinePos).length;
 
-	const prevLines = printLines(lines, startLinePos, linePos, maxNumLength);
-	const targetLineBeforeCursor = printLine(lines[linePos - 1].substring(0, columnPos - 1), linePos, maxNumLength);
-	const cursorLine = ' '.repeat(targetLineBeforeCursor.length) + CURSOR;
-	const nextLines = printLines(lines, linePos, endLinePos, maxNumLength);
+	const prevLines = printLines(lines, startLinePos, linePos, maxNumLength, settings);
+	const targetLineBeforeCursor = printLine(lines[linePos - 1].substring(0, columnPos - 1), linePos, maxNumLength, settings);
+	const cursorLine = ' '.repeat(targetLineBeforeCursor.length) + settings.cursor;
+	const nextLines = printLines(lines, linePos, endLinePos, maxNumLength, settings);
 
 	// let cutLeft = 0;
 

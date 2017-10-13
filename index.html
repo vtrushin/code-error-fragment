@@ -13,7 +13,10 @@
 			.then(data => data.text())
 			.then(text => {
 				console.log(
-					prettyCodeErrors(text, 26, 11)
+					prettyCodeErrors(text, 26, 11, {
+					  	tabSize: 4,
+						cursor: '👆'
+					})
 				);
 			});
 	</script>
