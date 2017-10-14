@@ -22,8 +22,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "build": "rollup --config rollup.config.js",
-    "watch": "rollup --config rollup.config.js --watch",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
     "prepublish": "npm run build"
   },
   "files": [
