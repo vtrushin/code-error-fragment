@@ -4,7 +4,7 @@
   "author": "Vlad Trushin",
   "homepage": "https://github.com/vtrushin/code-error-fragment",
   "description": "Shows code error fragment of input file",
-  "repository": "vtrushin/pretty-code-errors",
+  "repository": "vtrushin/code-error-fragment",
   "maintainers": [
     {
       "name": "Vlad Trushin <monospectr@mail.ru> (https://github.com/vtrushin)",
@@ -15,10 +15,12 @@
   "main": "build.js",
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
     "coveralls": "^3.0.0",
     "mocha": "^4.0.1",
     "rollup": "^0.50.0",
-    "rollup-plugin-babel": "^1.0.0"
+    "rollup-plugin-babel": "^3.0.2"
   },
   "scripts": {
     "test": "mocha",

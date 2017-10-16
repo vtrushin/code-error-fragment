@@ -1,2 +1,2 @@
-# Pretty code errors
+# Code error fragment
 
