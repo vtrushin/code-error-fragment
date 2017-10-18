@@ -20,7 +20,7 @@ const defaultSettings = {
 };
 
 export default (input, linePos, columnPos, settings) => {
-	settings = { ...defaultSettings, ...settings };
+	settings = Object.assign({}, defaultSettings, settings);
 
 	const lines = input.split(/\r\n?|\n|\f/);
 	const startLinePos = Math.max(1, linePos - settings.extraLines) - 1;
