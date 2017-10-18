@@ -13,6 +13,7 @@
     }
   ],
   "main": "build.js",
+  "jsnext:main": "index",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-helpers": "^6.24.1",
@@ -30,10 +31,5 @@
     "watch": "rollup -c -w",
     "prepublish": "npm run build"
   },
-  "files": [
-    "build.js",
-    "LICENSE",
-    "readme.md"
-  ],
   "license": "MIT"
 }
