@@ -1,6 +1,6 @@
 {
   "name": "code-error-fragment",
-  "version": "0.0.224",
+  "version": "0.0.225",
   "author": "Vlad Trushin",
   "homepage": "https://github.com/vtrushin/code-error-fragment",
   "description": "Shows code error fragment of input file",

@@ -1,7 +1,7 @@
-let fs = require('fs');
-let path = require('path');
-let assert = require('assert');
-let codeErrorFragment = require('../build');
+const fs = require('fs');
+const path = require('path');
+const assert = require('assert');
+const codeErrorFragment = require('../build');
 
 function readFile(file) {
 	let src = fs.readFileSync(file, 'utf8');
