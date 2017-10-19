@@ -1,6 +1,6 @@
 {
   "name": "code-error-fragment",
-  "version": "0.0.222",
+  "version": "0.0.223",
   "author": "Vlad Trushin",
   "homepage": "https://github.com/vtrushin/code-error-fragment",
   "description": "Shows code error fragment of input file",
@@ -15,6 +15,12 @@
   "main": "build.js",
   "module": "module",
   "jsnext:main": "module",
+  "files": [
+    "build.js",
+    "module.js",
+    "LICENSE",
+    "readme.md"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-helpers": "^6.24.1",
