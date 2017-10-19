@@ -1,10 +1,12 @@
-import padStart from './helpers/pad-start.js';
+import repeatString from 'repeat-string';
+import padStart from 'pad-start';
 
 function printLine(line, position, maxNumLength, settings) {
 	const num = String(position);
 	const formattedNum = padStart(num, maxNumLength, ' ');
+	const tabReplacement = repeatString(' ', settings.tabSize);
 
-	return formattedNum + ' | ' + line.replace(/\t/g, ' '.repeat(settings.tabSize));
+	return formattedNum + ' | ' + line.replace(/\t/g, tabReplacement);
 }
 
 function printLines(lines, start, end, maxNumLength, settings) {
@@ -28,7 +30,7 @@ export default (input, linePos, columnPos, settings) => {
 	const maxNumLength = String(endLinePos).length;
 	const prevLines = printLines(lines, startLinePos, linePos, maxNumLength, settings);
 	const targetLineBeforeCursor = printLine(lines[linePos - 1].substring(0, columnPos - 1), linePos, maxNumLength, settings);
-	const cursorLine = ' '.repeat(targetLineBeforeCursor.length) + '^';
+	const cursorLine = repeatString(' ', targetLineBeforeCursor.length) + '^';
 	const nextLines = printLines(lines, linePos, endLinePos, maxNumLength, settings);
 
 	return [prevLines, cursorLine, nextLines]
