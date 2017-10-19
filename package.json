@@ -1,6 +1,6 @@
 {
   "name": "code-error-fragment",
-  "version": "0.0.219",
+  "version": "0.0.220",
   "author": "Vlad Trushin",
   "homepage": "https://github.com/vtrushin/code-error-fragment",
   "description": "Shows code error fragment of input file",
@@ -34,7 +34,7 @@
     "test": "mocha",
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "license": "MIT"
 }
