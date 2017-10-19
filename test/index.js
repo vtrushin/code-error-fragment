@@ -4,7 +4,7 @@ const assert = require('assert');
 const codeErrorFragment = require('../build');
 
 function readFile(file) {
-	let src = fs.readFileSync(file, 'utf8');
+	var src = fs.readFileSync(file, 'utf8');
 	// normalize line endings
 	src = src.replace(/\r\n/, '\n');
 	// remove trailing newline
