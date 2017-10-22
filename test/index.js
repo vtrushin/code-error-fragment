@@ -17,7 +17,7 @@ const folderPath = path.join(__dirname, 'fixtures');
 
 describe('Test', () => {
 	fs.readdirSync(folderPath).forEach(fileName => {
-		const fixtureIndexOf = fileName.indexOf('.input');
+		const fixtureIndexOf = fileName.indexOf('.input.txt');
 
 		if (fixtureIndexOf === -1) {
 			return;
