@@ -18,6 +18,6 @@
 [![Requirements][node-versions-icon]][node-url]
 [![Travis-CI][test-icon]][test-url]
 
-<img src="logo.svg" alt="Logo" width="144" height="111" />
+<img src="logo.svg" alt="Code error fragment" width="144" height="111" />
 
 Partially taken from https://github.com/csstree/csstree
