@@ -20,4 +20,4 @@
 
 <img src="logo.svg" alt="Code error fragment" width="144" height="111" />
 
-Partially taken from https://github.com/csstree/csstree
+Partially taken from https://github.com/csstree/csstree/blob/master/lib/tokenizer/error.js
