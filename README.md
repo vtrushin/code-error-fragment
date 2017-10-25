@@ -11,7 +11,7 @@
 [coverage-icon]:      https://coveralls.io/repos/github/vtrushin/code-error-fragment/badge.svg?branch=master
 [coverage-url]:       https://coveralls.io/github/vtrushin/code-error-fragment?branch=master
 
-<img src="logo.svg" alt="Code error fragment" width="130" height="100" align="right" />
+<img src="logo.svg" alt="Code error fragment" width="144" height="111" align="right" />
 
 # Code error fragment
 
