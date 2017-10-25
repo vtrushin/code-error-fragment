@@ -1,9 +1,9 @@
 {
   "name": "code-error-fragment",
-  "version": "0.0.226",
+  "version": "0.0.228",
   "author": "Vlad Trushin",
-  "homepage": "https://github.com/vtrushin/code-error-fragment",
   "description": "Shows code error fragment of input file",
+  "homepage": "https://github.com/vtrushin/code-error-fragment",
   "repository": "vtrushin/code-error-fragment",
   "maintainers": [
     {
@@ -12,6 +12,11 @@
       "github-username": "vtrushin"
     }
   ],
+  "keywords": [
+    "code-errors",
+    "error-formatting",
+    "error-fragment"
+  ],
   "main": "build.js",
   "files": [
     "build.js",
@@ -19,6 +24,16 @@
     "LICENSE",
     "readme.md"
   ],
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "pretest": "npm run build",
+    "test": "mocha",
+    "prepublishOnly": "npm run build"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-helpers": "^6.24.1",
@@ -33,13 +48,6 @@
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.3",
     "rollup-plugin-node-resolve": "^3.0.0"
-  },
-  "scripts": {
-    "test": "mocha",
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "pretest": "npm run build",
-    "prepublishOnly": "npm run build"
   },
   "license": "MIT"
 }
