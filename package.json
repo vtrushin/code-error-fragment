@@ -1,6 +1,6 @@
 {
   "name": "code-error-fragment",
-  "version": "0.0.228",
+  "version": "0.0.229",
   "author": "Vlad Trushin",
   "description": "Shows code error fragment of input file",
   "homepage": "https://github.com/vtrushin/code-error-fragment",
@@ -20,9 +20,8 @@
   "main": "build.js",
   "files": [
     "build.js",
-    "module.js",
     "LICENSE",
-    "readme.md"
+    "README.md"
   ],
   "engines": {
     "node": ">= 4"
