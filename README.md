@@ -11,13 +11,13 @@
 [coverage-icon]:      https://coveralls.io/repos/github/vtrushin/code-error-fragment/badge.svg?branch=master
 [coverage-url]:       https://coveralls.io/github/vtrushin/code-error-fragment?branch=master
 
+<img src="logo.svg" alt="Code error fragment" width="130" height="100" align="right" />
+
 # Code error fragment
 
 [![NPM][npm-icon]][npm-url]
 [![NPM downloads][npm-downloads-icon]][npm-url]
 [![Requirements][node-versions-icon]][node-url]
 [![Travis-CI][test-icon]][test-url]
-
-<img src="logo.svg" alt="Code error fragment" width="144" height="111" />
 
 Partially taken from https://github.com/csstree/csstree/blob/master/lib/tokenizer/error.js
