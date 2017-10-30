@@ -1,17 +1,10 @@
 {
   "name": "code-error-fragment",
   "version": "0.0.230",
-  "author": "Vlad Trushin",
+  "author": "Vlad Trushin <monospectr@mail.ru> (https://github.com/vtrushin)",
   "description": "Shows code error fragment of input file",
   "homepage": "https://github.com/vtrushin/code-error-fragment",
   "repository": "vtrushin/code-error-fragment",
-  "maintainers": [
-    {
-      "name": "Vlad Trushin <monospectr@mail.ru> (https://github.com/vtrushin)",
-      "email": "monospectr@mail.ru",
-      "github-username": "vtrushin"
-    }
-  ],
   "keywords": [
     "code-errors",
     "error-formatting",
